@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>ShopBiker</title>
+	<link rel="icon" href="Imagenes/icono.jpeg" type=".jpng">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link href="Custom.css" rel="stylesheet">
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+		viewBox="0 0 16 16">
+		<path fill-rule="evenodd"
+			d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+	</svg>
+	<meta name="Author" content="Jaime Prieto Rubio">
+	<meta name="Descripcion"
+		content="Se trata de una tienda no funcional de base de datos que esta caracterizada por la venta de motocicletas y de su equipamiento protecto y no protector">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="container-fluid d-none d-md-block">
+		<header class="sticky-top">
+			<nav class="navbar bg-body-dark  border-bottom border-white  navegador1">
+				<a href="index.html">
+					<div class="col  bg-opacity-25 text-opacity-75 text-center px-2 mx-2 "><img class="icon"
+							src="Imagenes/Logo.png" width="50px" height="40px">
+						<p class="h1 text-center ">ShopBiker</p>
+					</div>
+				</a>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2 mx-2 "><a href="Categorias.html"
+						class=" navbar-brand"><button class="btn btn-outline-primary me-2 " type="button">Categorias
+						</button></a></div>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2 mx-2 "><a
+						href="complementos.html#com_mot" class=" navbar-brand"><button
+							class="btn btn-outline-primary me-2 " type="button">Complementos
+							de moto</button></a>
+				</div>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2 mx-2 "><a
+						href="complementos.html#comp_pro" class=" navbar-brand "><button
+							class="btn btn-outline-primary me-2" type="button">Complementos
+							protectores</button></a>
+				</div>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2 mx-2 "><a href="Carrito.html"
+						class=" navbar-brand"><button class="btn btn-outline-danger me-2 " type="button"><i
+								class="bi bi-cart2"></i></button></a></div>
+
+			</nav>
+		</header>
+		<main>
+			<img src="Imagenes/motocicleta.png" class="motocicletaTran">
+			<div class="row border-top border-white">
+				<div class="col-2 text-center  my-3">
+					<ul class="lista_categoria">
+						<li><a href="#Carretera" class="blue">
+								<div class="my-5 posicion_categoria">SUPERMOTARD</div>
+							</a></li>
+						<li><a href="#Chopper" class="blue">
+								<div class="my-5 posicion_categoria">CHOPPER</div>
+							</a></li>
+						<li><a href="#Deportivas" class="blue">
+								<div class="my-5 posicion_categoria">DEPORTIVAS</div>
+							</a></li>
+						<li><a href="#Motodecross" class="blue">
+								<div class="my-5 posicion_categoria">MOTO DE CROSS</div>
+							</a></li>
+						<li><a href="#Scooter" class="blue">
+								<div class="my-5 posicion_categoria">SCOOTER</div>
+							</a></li>
+					</ul>
+				</div>
+				<div class="col-10 mx-auto">
+					<div class="row text-center text-white mx-5 my-3 contenido_motos align-center">
+						<h1 class="titulo_moto" id="Carretera">Supermotard</h1>
+						<!--Todo esto lo encontre de la pagina Uiverse.io-->
+						<div class="col mx-auto mt-3">
+							<div class="card float-start">
+								<div class="card-inner">
+									<div class="card-front">
+										<img src="Imagenes/KTM.jpg" alt="KTM duke 125" class="imagen_moto">
+									</div>
+									<div class="card-back">
+										<ul class="lista_propiedades">
+											<h1> Ktm duke 125(2021)</h2>
+												<li>Cilindrada: 125 cc</li>
+												<li>Combustible: Gasolina sin plomo 95</li>
+												<li>Ciclo: 4 tiempos</li>
+												<li>Potencia maxima declarada: 15 CV</li>
+												<li>Numero de velocidades: 6</li>
+												<li>Precio: desde 4.500€</li>
+												<li class="sinDecorar"><button
+														class="text-white btn btn-outline-primary compra">Comprar</button>
+												</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col mx-auto mt-3">
+							<div class="card float-end">
+								<div class="card-inner">
+									<div class="card-front">
+										<img src="Imagenes/Aprilia.jpg" alt="Aprilia RS 457" class="imagen_moto">
+									</div>
+									<div class="card-back">
+										<ul class="lista_propiedades">
+											<h1> Aprilia RS 457(2024)</h2>
+												<li>Cilindrada: 457 cc</li>
+												<li>Combustible: Gasolina sin plomo 98</li>
+												<li>Ciclo: 4 tiempos</li>
+												<li>Potencia maxima declarada: 47.5 CV</li>
+												<li>Numero de velocidades: 6</li>
+												<li>Precio: desde 7000€</li>
+												<li class="sinDecorar"><button
+														class="text-white btn btn-outline-primary compra">Comprar</button>
+												</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="row text-center text-white mx-3 my-3 contenido_motos align-center">
+							<h1 class="titulo_moto" id="Deportivas">Deportivas</h1>
+							<div class="col mx-auto mt-3">
+								<div class="card float-start">
+									<div class="card-inner">
+										<div class="card-front">
+											<img src="Imagenes/R1.jpg" alt="YAMAHA YZF-R1" class="imagen_moto">
+										</div>
+										<div class="card-back">
+											<ul class="lista_propiedades">
+												<h1>YAMAHA YZF-R1</h2>
+													<li>Cilindrada: 998 cc</li>
+													<li>Combustible: Gasolina sin plomo 95/98</li>
+													<li>Ciclo: 4 tiempos</li>
+													<li>Potencia maxima declarada: 200 CV a 13.500 rpm</li>
+													<li>Numero de velocidades: 6</li>
+													<li>Precio: desde 30000€</li>
+													<li class="sinDecorar"><button
+															class="text-white btn btn-outline-primary compra">Comprar</button>
+													</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col mx-auto mt-3">
+								<div class="card float-end">
+									<div class="card-inner">
+										<div class="card-front">
+											<img src="Imagenes/R6.jpg" alt="YAMAHA R6 RACE 118 cv de 2021"
+												class="imagen_moto">
+										</div>
+										<div class="card-back">
+											<ul class="lista_propiedades">
+												<h1> YAMAHA R6 RACE</h2>
+													<li>Cilindrada: 599 cc</li>
+													<li>Combustible: Gasolina sin plomo 98</li>
+													<li>Ciclo: 4 tiempos</li>
+													<li>Potencia maxima declarada: 118 CV </li>
+													<li>Numero de velocidades: 6</li>
+													<li>Precio: desde 13.200 €</li>
+													<li class="sinDecorar"><button
+															class="text-white btn btn-outline-primary compra">Comprar</button>
+													</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row text-center text-white mx-3 my-3 contenido_motos ">
+							<h1 class="titulo_moto" id="Chopper">Chopper</h1>
+							<div class="col mx-auto mt-3">
+								<div class="card float-start transladar">
+									<div class="card-inner">
+										<div class="card-front ">
+											<img src="Imagenes/CHOPPER.jpeg" alt="HONDA VT 1300 CX FURY"
+												class="imagen_moto">
+										</div>
+										<div class="card-back">
+											<ul class="lista_propiedades">
+												<h1>HONDA VT 1300 CX FURY</h2>
+													<li>Cilindrada: 1312 cc</li>
+													<li>Combustible: Gasolina sin plomo 95/98</li>
+													<li>Ciclo: 4 tiempos</li>
+													<li>Potencia maxima declarada: 57.75 cv a 4250 rpm</li>
+													<li>Precio: desde 15.500 €</li>
+													<li class="sinDecorar"><button
+															class="text-white btn btn-outline-primary compra">Comprar</button>
+													</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row text-center text-white mx-3 my-3 contenido_motos align-center">
+							<h1 class="titulo_moto" id="Motodecross">Moto de cross</h1>
+
+							<div class="col mx-auto mt-3">
+								<div class="card float-end">
+									<div class="card-inner">
+										<div class="card-front">
+											<img src="Imagenes/Moto de cross.jpg" alt="Honda CRF450R"
+												class="imagen_moto">
+										</div>
+										<div class="card-back">
+											<ul class="lista_propiedades">
+												<h1> Honda CRF450R </h2>
+													<li>Cilindrada: 449,7cc</li>
+													<li>Combustible: Gasolina sin plomo 98</li>
+													<li>Ciclo: 4 tiempos</li>
+													<li>Sistema frenado delantero: 1 disco lobulado Ø 260mm de
+														accionamiento hidráulico</li>
+													<li>Sistema frenado Trasero: 1 disco lobulado Ø 240mm de
+														accionamiento hidráulico</li>
+													<li>Precio: desde 10.500€</li>
+													<li class="sinDecorar"><button
+															class="text-white btn btn-outline-primary compra">Comprar</button>
+													</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row text-center text-white mx-3 my-3 contenido_motos align-center">
+							<h1 class="titulo_moto" id="Scooter">Scooter</h1>
+							<div class="col mx-auto mt-3">
+								<div class="card float-start">
+									<div class="card-inner">
+										<div class="card-front">
+											<img src="Imagenes/Scooter.jpg" alt=" Kymco Super Dink" class="imagen_moto">
+										</div>
+										<div class="card-back">
+											<ul class="lista_propiedades">
+												<h1>Kymco Super Dink</h2>
+													<li>Cilindrada: 125 cc</li>
+													<li>Combustible: Gasolina sin plomo 95/98</li>
+													<li>Ciclo: 4 tiempos</li>
+													<li>Potencia maxima declarada: 12,9 CV a 9.000 rpm</li>
+													<li>Precio: desde 4000€</li>
+													<li class="sinDecorar"><button
+															class="text-white btn btn-outline-primary compra">Comprar</button>
+													</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col mx-auto mt-3">
+								<div class="card float-end">
+									<div class="card-inner">
+										<div class="card-front">
+											<img src="Imagenes/vespa.jpg" alt="Primavera 125 Euro 5"
+												class="imagen_moto">
+										</div>
+										<div class="card-back">
+											<ul class="lista_propiedades">
+												<h1> Primavera 125 Euro 5</h2>
+													<li>Cilindrada: 124 cc (155 cc) </li>
+													<li>Combustible: Gasolina sin plomo 98</li>
+													<li>Ciclo: 4 tiempos</li>
+													<li>Potencia maxima declarada: 12,5 CV </li>
+													<li>Precio: desde 4700 €</li>
+													<li class="sinDecorar"><button
+															class="text-white btn btn-outline-primary compra">Comprar</button>
+													</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p class="final">&COPY;JPR@SHOPBIKER.COM</p>
+		</footer>
+	</div>
+
+	<div class="container-fluid d-md-none">
+		<header class="sticky-top">
+			<nav class="navbar bg-body-dark border-bottom border-white  navegador1 mx-auto">
+
+				<button class="col  mx-auto btn btn-primary menu" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+					<i class="bi bi-list"></i>
+				</button>
+				<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+					aria-labelledby="offcanvasExampleLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasExampleLabel">SHOPBIKER</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<div>
+							Si le da click al boton podras ver las partes que tiene esta web.
+						</div>
+						<div class="dropdown mt-3">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+								Partes de la web
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="complementos.html#com_mot2">Complementos moto</a>
+								</li>
+								<li><a class="dropdown-item" href="Categorias.html">Categorias</a></li>
+								<li><a class="dropdown-item" href="complementos.html#com_pro2">Complementos
+										protectores</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="offset-1"></div>
+				<a href="index.html">
+					<div class="col  bg-opacity-25 text-opacity-75 text-center px-2 mx-auto align-center"><img
+							class="icon" src="Imagenes/Logo.png" width="50px" height="40px">
+						<p class="h1 text-center ">ShopBiker</p>
+					</div>
+				</a>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2  mx-auto align-right"><a
+						href="Carrito.html" class=" navbar-brand"><button class="btn btn-outline-danger me-2 "
+							type="button"><i class="bi bi-cart2"></i></button></a></div>
+
+			</nav>
+		</header>
+		<main>
+			<img src="Imagenes/motocicleta.png" class="motocicletaTran">
+			<div class="row border-top border-white xolumna_lista">
+				<ul class="lista_categoria2">
+					<div class="col text-center mx-auto my-3">
+						<a href="#Carretera2" class="blue mx-auto ">
+							<div class="my-5 posicion_categoria">SUPERMOTARD</div>
+						</a>
+					</div>
+					<div class="col text-center mx-auto my-3">
+						<a href="#Chopper2" class="blue mx-auto ">
+							<div class="my-5  posicion_categoria">CHOPPER</div>
+						</a>
+					</div>
+					<div class="col text-center mx-auto my-3">
+						<a href="#Deportivas2" class="blue mx-auto ">
+							<div class="my-5 posicion_categoria">DEPORTIVAS</div>
+						</a>
+					</div>
+					<div class="col text-center mx-auto my-3">
+						<a href="#Motodecross2" class="blue mx-auto ">
+							<div class="my-5 posicion_categoria">MOTO DE CROSS</div>
+						</a>
+					</div>
+					<div class="col text-center mx-auto my-3">
+						<a href="#Scooter2" class="blue mx-auto">
+							<div class="my-5 posicion_categoria">SCOOTER</div>
+						</a>
+					</div>
+				</ul>
+			</div>
+
+			<div class="row text-center text-white mx-5 my-3 contenido_motos align-center">
+				<h1 class="titulo_moto" id="Carretera2">Supermotard</h1>
+				<!--Todo esto lo encontre de la pagina Uiverse.io-->
+				<div class="col-12 mx-auto mt-3">
+					<div class="card">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="Imagenes/KTM.jpg" alt="KTM duke 125" class="imagen_moto">
+							</div>
+							<div class="card-back">
+								<ul class="lista_propiedades">
+									<h1> Ktm duke 125(2021)</h2>
+										<li>Cilindrada: 125 cc</li>
+										<li>Combustible: Gasolina sin plomo 95</li>
+										<li>Ciclo: 4 tiempos</li>
+										<li>Potencia maxima declarada: 15 CV</li>
+										<li>Numero de velocidades: 6</li>
+										<li>Precio: desde 4.500€</li>
+										<li class="sinDecorar"><button
+												class="text-white btn btn-outline-primary compra">Comprar</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 mx-auto mt-3">
+					<div class="card ">
+						<div class="card-inner">
+							<div class="card-front">
+								<img src="Imagenes/Aprilia.jpg" alt="Aprilia RS 457" class="imagen_moto">
+							</div>
+							<div class="card-back">
+								<ul class="lista_propiedades">
+									<h1> Aprilia RS 457(2024)</h2>
+										<li>Cilindrada: 457 cc</li>
+										<li>Combustible: Gasolina sin plomo 98</li>
+										<li>Ciclo: 4 tiempos</li>
+										<li>Potencia maxima declarada: 47.5 CV</li>
+										<li>Numero de velocidades: 6</li>
+										<li>Precio: desde 7000€</li>
+										<li class="sinDecorar"><button
+												class="text-white btn btn-outline-primary compra">Comprar</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row text-center text-white mx-3 my-3 contenido_motos align-center">
+					<h1 class="titulo_moto" id="Deportivas2">Deportivas</h1>
+					<div class="col-12 mx-auto mt-3">
+						<div class="card ">
+							<div class="card-inner">
+								<div class="card-front">
+									<img src="Imagenes/R1.jpg" alt="YAMAHA YZF-R1" class="imagen_moto">
+								</div>
+								<div class="card-back">
+									<ul class="lista_propiedades">
+										<h1>YAMAHA YZF-R1</h2>
+											<li>Cilindrada: 998 cc</li>
+											<li>Combustible: Gasolina sin plomo 95/98</li>
+											<li>Ciclo: 4 tiempos</li>
+											<li>Potencia maxima declarada: 200 CV a 13.500 rpm</li>
+											<li>Numero de velocidades: 6</li>
+											<li>Precio: desde 30000€</li>
+											<li class="sinDecorar"><button
+													class="text-white btn btn-outline-primary compra">Comprar</button>
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 mx-auto mt-3">
+						<div class="card ">
+							<div class="card-inner">
+								<div class="card-front">
+									<img src="Imagenes/R6.jpg" alt="YAMAHA R6 RACE 118 cv de 2021" class="imagen_moto">
+								</div>
+								<div class="card-back">
+									<ul class="lista_propiedades">
+										<h1> YAMAHA R6 RACE</h2>
+											<li>Cilindrada: 599 cc</li>
+											<li>Combustible: Gasolina sin plomo 98</li>
+											<li>Ciclo: 4 tiempos</li>
+											<li>Potencia maxima declarada: 118 CV </li>
+											<li>Numero de velocidades: 6</li>
+											<li>Precio: desde 13.200 €</li>
+											<li class="sinDecorar"><button
+													class="text-white btn btn-outline-primary compra">Comprar</button>
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row text-center text-white mx-3 my-3 contenido_motos ">
+					<h1 class="titulo_moto" id="Chopper2">Chopper</h1>
+					<div class="col-12 mx-auto mt-3">
+						<div class="card">
+							<div class="card-inner">
+								<div class="card-front ">
+									<img src="Imagenes/CHOPPER.jpeg" alt="HONDA VT 1300 CX FURY" class="imagen_moto">
+								</div>
+								<div class="card-back">
+									<ul class="lista_propiedades">
+										<h1>HONDA VT 1300 CX FURY</h2>
+											<li>Cilindrada: 1312 cc</li>
+											<li>Combustible: Gasolina sin plomo 95/98</li>
+											<li>Ciclo: 4 tiempos</li>
+											<li>Potencia maxima declarada: 57.75 cv a 4250 rpm</li>
+											<li>Precio: desde 15.500 €</li>
+											<li class="sinDecorar"><button
+													class="text-white btn btn-outline-primary compra">Comprar</button>
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row text-center text-white mx-3 my-3 contenido_motos align-center">
+					<h1 class="titulo_moto" id="Motodecross2">Moto de cross</h1>
+
+					<div class="col-12 mx-auto mt-3">
+						<div class="card ">
+							<div class="card-inner">
+								<div class="card-front">
+									<img src="Imagenes/Moto de cross.jpg" alt="Honda CRF450R" class="imagen_moto">
+								</div>
+								<div class="card-back">
+									<ul class="lista_propiedades">
+										<h1> Honda CRF450R </h2>
+											<li>Cilindrada: 449,7cc</li>
+											<li>Combustible: Gasolina sin plomo 98</li>
+											<li>Ciclo: 4 tiempos</li>
+											<li>Sistema frenado delantero: 1 disco lobulado Ø 260mm de
+												accionamiento hidráulico</li>
+											<li>Sistema frenado Trasero: 1 disco lobulado Ø 240mm de
+												accionamiento hidráulico</li>
+											<li>Precio: desde 10.500€</li>
+											<li class="sinDecorar"><button
+													class="text-white btn btn-outline-primary compra">Comprar</button>
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row text-center text-white mx-3 my-3 contenido_motos align-center">
+					<h1 class="titulo_moto" id="Scooter2">Scooter</h1>
+					<div class="col-12 mx-auto mt-3">
+						<div class="card ">
+							<div class="card-inner">
+								<div class="card-front">
+									<img src="Imagenes/Scooter.jpg" alt=" Kymco Super Dink" class="imagen_moto">
+								</div>
+								<div class="card-back">
+									<ul class="lista_propiedades">
+										<h1>Kymco Super Dink</h2>
+											<li>Cilindrada: 125 cc</li>
+											<li>Combustible: Gasolina sin plomo 95/98</li>
+											<li>Ciclo: 4 tiempos</li>
+											<li>Potencia maxima declarada: 12,9 CV a 9.000 rpm</li>
+											<li>Precio: desde 4000€</li>
+											<li class="sinDecorar"><button
+													class="text-white btn btn-outline-primary compra">Comprar</button>
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 mx-auto mt-3">
+						<div class="card">
+							<div class="card-inner">
+								<div class="card-front">
+									<img src="Imagenes/vespa.jpg" alt="Primavera 125 Euro 5" class="imagen_moto">
+								</div>
+								<div class="card-back">
+									<ul class="lista_propiedades">
+										<h1> Primavera 125 Euro 5</h2>
+											<li>Cilindrada: 124 cc (155 cc) </li>
+											<li>Combustible: Gasolina sin plomo 98</li>
+											<li>Ciclo: 4 tiempos</li>
+											<li>Potencia maxima declarada: 12,5 CV </li>
+											<li>Precio: desde 4700 €</li>
+											<li class="sinDecorar"><button
+													class="text-white btn btn-outline-primary compra">Comprar</button>
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="row text-center mt-5">
+				<p class="final col">&COPY;JPR@SHOPBIKER.COM</p>
+			</div>
+		</footer>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+		<script src="javaScript/Js.js"></script>
+</body>
+
+</html>

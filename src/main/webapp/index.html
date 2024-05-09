@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>ShopBiker</title>
+	<link rel="icon" href="Imagenes/icono.jpeg" type=".jpng">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link href="Custom.css" rel="stylesheet">
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+		viewBox="0 0 16 16">
+		<path fill-rule="evenodd"
+			d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+	</svg>
+	<meta name="Author" content="Jaime Prieto Rubio">
+	<meta name="Descripcion"
+		content="Se trata de una tienda no funcional de base de datos que esta caracterizada por la venta de motocicletas y de su equipamiento protecto y no protector">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+	<div class="container-fluid d-none d-md-block">
+		<header class="sticky-top">
+			<nav class="navbar bg-body-dark  border-bottom border-white  navegador1">
+				<a href="index.html">
+					<div class="col  bg-opacity-25 text-opacity-75 text-center px-2 mx-2 "><img class="icon"
+							src="Imagenes/Logo.png" width="50px" height="40px">
+						<p class="h1 text-center ">ShopBiker</p>
+					</div>
+				</a>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2 mx-2 "><a href="Categorias.html"
+						class=" navbar-brand"><button class="btn btn-outline-primary me-2 " type="button">Categorias
+						</button></a></div>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2 mx-2 "><a href="complementos.html#com_mot"
+						class=" navbar-brand"><button class="btn btn-outline-primary me-2 " type="button">Complementos
+							de moto</button></a>
+				</div>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2 mx-2 "><a
+						href="complementos.html#comp_pro" class=" navbar-brand "><button
+							class="btn btn-outline-primary me-2" type="button">Complementos
+							protectores</button></a>
+				</div>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2 mx-2 "><a href="Carrito.html"
+						class=" navbar-brand"><button class="btn btn-outline-danger me-2 " type="button"><i
+								class="bi bi-cart2"></i></button></a></div>
+
+			</nav>
+		</header>
+		<main>
+			<div class=" section mt-3 mx-auto border border-2 border-black">
+				<img src="Imagenes/R1.jpg " class="img-fluid mx-0 imagen">
+				<img src="Imagenes/R6.jpg " class="img-fluid mx-0 imagen">
+				<img src="Imagenes/H2R.jpg" class="img-fluid mx-0 imagen">
+				<img src="Imagenes/CHOPPER.jpeg" class="img-fluid mx-0 imagen">
+				<img src="Imagenes/HARLEY.jpg" class="img-fluid mx-0 imagen">
+				<img src="Imagenes/AMB 001 aston mortin.jpeg" class="img-fluid mx-0 imagen">
+				<img src="Imagenes/KTM.jpg" class="img-fluid mx-0 imagen">
+			</div>
+
+
+			<div class="row mt-5 mx-auto">
+
+
+				<div class="difuminado col-3 mx-auto align-left">
+					<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+								aria-label="Slide 4"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+								aria-label="Slide 5"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="Imagenes/Candado duro.jpg" class="d-block w-100" alt="Candado duro">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Candado largo.jpg" class="d-block w-100" alt="Candado largo">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Baul pequeño.jpg" class="d-block w-100" alt="Baul pequeño">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Lona cubre motos.jpg" class="d-block w-100" alt="Lona cubre motos">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Baul.jpg" class="d-block w-100" alt="Baul">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+					<div class="row text-center mt-2">
+						<a href="complementos.html"><button type="button"
+								class="btn btn-outline-primary">Complementos</button></a>
+					</div>
+				</div>
+
+
+
+				<div class="col-5 align-center categorias mx-auto">
+					<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<a href="Categorias.html#Carretera">
+								<div class="carousel-item active" data-bs-interval="3000">
+									<img src="Imagenes/KTM.jpg" class="d-block w-100" alt="Categoria de Carretera">
+									<div class="carousel-caption d-none d-md-block">
+										<h2>SUPERMOTARD</h2>
+									</div>
+								</div>
+							</a>
+
+							<a href="Categorias.html#Chopper">
+								<div class="carousel-item" data-bs-interval="3000">
+									<img src="Imagenes/CHOPPER.jpeg" class="d-block w-100" alt="Categoria Chopper">
+									<div class="carousel-caption d-none d-md-block">
+										<h2>CHOPPER</h2>
+									</div>
+								</div>
+							</a>
+
+							<a href="Categorias.html#Deportivas">
+								<div class="carousel-item" data-bs-interval="3000">
+									<img src="Imagenes/R6.jpg" class="d-block w-100" alt="Categoria Deportiva">
+									<div class="carousel-caption d-none d-md-block">
+										<h2>DEPORTIVAS</h2>
+									</div>
+								</div>
+							</a>
+
+							<a href="Categorias.html#Motodecross">
+								<div class="carousel-item" data-bs-interval="3000">
+									<img src="Imagenes/Moto de cross.jpg" class="d-block w-100"
+										alt="Categoria de moto de cross">
+									<div class="carousel-caption d-none d-md-block">
+										<h2>MOTO DE CROSS</h2>
+									</div>
+								</div>
+							</a>
+
+							<a href="Categorias.html#Scooter">
+								<div class="carousel-item" data-bs-interval="3000">
+									<img src="Imagenes/Scooter.jpg" class="d-block w-100" alt="Categoria Scooter">
+									<div class="carousel-caption d-none d-md-block">
+										<h2>SCOOTER</h2>
+									</div>
+								</div>
+							</a>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+
+
+
+				<div class=" difuminado col-3 align-right mx-auto">
+					<div id="carouselExampleDark1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+								aria-label="Slide 4"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+								aria-label="Slide 5"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="Imagenes/pantalones.jpg" class="d-block w-100"
+									alt="Pantalones protectores de cuero">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/chupa de cuero.jpg" class="d-block w-100"
+									alt="Chupa protectora de cuero">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Casco moto.jpg" class="d-block w-100" alt="Casco de moto">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/casco moto cross.jpg" class="d-block w-100"
+									alt="Casco protector customizado">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/guantes moto.jpg" class="d-block w-100"
+									alt="Guantes de proteccion para motos">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark1"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark1"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+					<div class="row text-center mt-2 btos">
+						<a href="complementos.html"><button type="button" class="btn btn-outline-primary">Complementos
+								protector</button></a>
+					</div>
+				</div>
+		</main>
+		<footer>
+			<p class="final">&COPY;JPR@SHOPBIKER.COM</p>
+		</footer>
+	</div>
+
+
+
+
+
+	<div class="container-fluid d-md-none">
+		<header class="sticky-top">
+			<nav class="navbar bg-body-dark border-bottom border-white  navegador1 mx-auto">
+
+				<button class="col  mx-auto btn btn-primary menu" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+					<i class="bi bi-list"></i>
+				</button>
+				<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+					aria-labelledby="offcanvasExampleLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasExampleLabel">SHOPBIKER</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<div>
+							Si le da click al boton podras ver las partes que tiene esta web.
+						</div>
+						<div class="dropdown mt-3">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+								Partes de la web
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="complementos.html#com_mot2">Complementos moto</a>
+								</li>
+								<li><a class="dropdown-item" href="Categorias.html">Categorias</a></li>
+								<li><a class="dropdown-item" href="complementos.html#com_pro2">Complementos
+										protectores</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="offset-1"></div>
+				<a href="index.html">
+					<div class="col  bg-opacity-25 text-opacity-75 text-center px-2 mx-auto align-center"><img
+							class="icon" src="Imagenes/Logo.png" width="50px" height="40px">
+						<p class="h1 text-center ">ShopBiker</p>
+					</div>
+				</a>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2  mx-auto align-right"><a
+						href="Carrito.html" class=" navbar-brand"><button class="btn btn-outline-danger me-2 "
+							type="button"><i class="bi bi-cart2"></i></button></a></div>
+
+			</nav>
+		</header>
+		<main>
+			<div class="row mt-5 mx-auto">
+				<div class="difuminado col mx-auto align-center">
+					<div id="carouselExampleDark3" class="carousel carousel-dark slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+								aria-label="Slide 4"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+								aria-label="Slide 5"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="Imagenes/Candado duro.jpg" class="d-block w-100" alt="Candado duro">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Candado largo.jpg" class="d-block w-100" alt="Candado largo">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Baul pequeño.jpg" class="d-block w-100" alt="Baul pequeño">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Lona cubre motos.jpg" class="d-block w-100" alt="Lona cubre motos">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Baul.jpg" class="d-block w-100" alt="Baul">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark3"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark3"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+					<div class="row text-center mt-2">
+						<a href="complementos.html"><button type="button"
+								class="btn btn-outline-primary">Complementos</button></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-5 mx-auto">
+				<div class="col align-center categorias mx-auto">
+					<div id="carouselExampleInterval1" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<a href="Categorias.html#Carretera2">
+								<div class="carousel-item active" data-bs-interval="3000">
+									<img src="Imagenes/KTM.jpg" class="d-block w-100" alt="Categoria de Carretera">
+									<div class="carousel-caption d-none d-sm-block">
+										<h2>SUPERMOTARD</h2>
+									</div>
+								</div>
+							</a>
+
+							<a href="Categorias.html#Chopper2">
+								<div class="carousel-item" data-bs-interval="3000">
+									<img src="Imagenes/CHOPPER.jpeg" class="d-block w-100" alt="Categoria Chopper">
+									<div class="carousel-caption d-none d-sm-block">
+										<h2>CHOPPER</h2>
+									</div>
+								</div>
+							</a>
+
+							<a href="Categorias.html#Deportivas2">
+								<div class="carousel-item" data-bs-interval="3000">
+									<img src="Imagenes/R6.jpg" class="d-block w-100" alt="Categoria Deportiva">
+									<div class="carousel-caption d-none d-sm-block">
+										<h2>DEPORTIVAS</h2>
+									</div>
+								</div>
+							</a>
+
+							<a href="Categorias.html#Motodecross2">
+								<div class="carousel-item" data-bs-interval="3000">
+									<img src="Imagenes/Moto de cross.jpg" class="d-block w-100"
+										alt="Categoria de moto de cross">
+									<div class="carousel-caption d-none d-sm-block">
+										<h2>MOTO DE CROSS</h2>
+									</div>
+								</div>
+							</a>
+
+							<a href="Categorias.html#Scooter2">
+								<div class="carousel-item" data-bs-interval="3000">
+									<img src="Imagenes/Scooter.jpg" class="d-block w-100" alt="Categoria Scooter">
+									<div class="carousel-caption d-none d-sm-block">
+										<h2>SCOOTER</h2>
+									</div>
+								</div>
+							</a>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-5 mx-auto">
+				<div class=" difuminado tamaño col align-right mx-auto">
+					<div id="carouselExampleDark2" class="carousel carousel-dark slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+								aria-label="Slide 4"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+								aria-label="Slide 5"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="Imagenes/pantalones.jpg" class="d-block w-100"
+									alt="Pantalones protectores de cuero">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/chupa de cuero.jpg" class="d-block w-100"
+									alt="Chupa protectora de cuero">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/Casco moto.jpg" class="d-block w-100" alt="Casco de moto">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/casco moto cross.jpg" class="d-block w-100"
+									alt="Casco protector customizado">
+							</div>
+							<div class="carousel-item">
+								<img src="Imagenes/guantes moto.jpg" class="d-block w-100"
+									alt="Guantes de proteccion para motos">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark2"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark2"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+					<div class="row text-center mt-2 btos">
+						<a href="complementos.html"><button type="button" class="btn btn-outline-primary">Complementos
+								protector</button></a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="row text-center mt-5">
+				<p class="final col">&COPY;JPR@SHOPBIKER.COM</p>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
