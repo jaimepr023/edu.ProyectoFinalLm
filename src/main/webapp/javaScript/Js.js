@@ -1,8 +1,8 @@
 /**
  * 
  */
-
-var BDDProductos = [];
+var BDDProductos = JSON.parse(localStorage.getItem("nuevoProducto"));
+var productos= [{id: 0, precio: 0, nombre: "Nada", cantidad: 0 }];
 
 function verificarContrasenia() {
 	let contrasena1 = document.getElementById("exampleInputPassword1").value;
@@ -28,92 +28,93 @@ function verificarContrasenia1() {
 	}
 }
 
-const todosLosComplementos = [
-	{ id: 1, precio: 300, nombre: "Baul pequeño", cantidad: 0 },
-	{ id: 2, precio: 40, nombre: "Candado duro", cantidad: 0 },
-	{ id: 3, precio: 25, nombre: "Lona cubre motos", cantidad: 0 },
-	{ id: 4, precio: 120, nombre: "Baul grande", cantidad: 0 },
-	{ id: 5, precio: 50, nombre: "Candado largo", cantidad: 0 },
-	{ id: 6, precio: 150, nombre: "Casco motocross", cantidad: 0 },
-	{ id: 7, precio: 330, nombre: "Chupa de cuero", cantidad: 0 },
-	{ id: 8, precio: 76, nombre: "Guantes de motos", cantidad: 0 },
-	{ id: 9, precio: 420, nombre: "Cascos de moto", cantidad: 0 },
-	{ id: 10, precio: 400, nombre: "Pantalon protector de moto", cantidad: 0 }
-];
-const todasLasMotos = [
-	{ id: 1, precio: 4500, nombre: "KTM Duke 125", cantidad: 0 },
-	{ id: 2, precio: 7000, nombre: "Aprilia RS 475", cantidad: 0 },
-	{ id: 3, precio: 30000, nombre: "Yamaha YZF-R1", cantidad: 0 },
-	{ id: 4, precio: 13200, nombre: "Yamaha R6 Race", cantidad: 0 },
-	{ id: 5, precio: 15500, nombre: "Honda VT 1300 CX FURY", cantidad: 0 },
-	{ id: 6, precio: 10500, nombre: "Honda CRF450R", cantidad: 0 },
-	{ id: 7, precio: 4000, nombre: "Kymco Super Dink", cantidad: 0 },
-	{ id: 8, precio: 4700, nombre: "Primavera 125 Euro 5", cantidad: 0 }
+const todosProductos = [
+  { id: 11, precio: 4500, nombre: "KTM Duke 125", cantidad: 0 },
+  { id: 12, precio: 7000, nombre: "Aprilia RS 475", cantidad: 0 },
+  { id: 13, precio: 30000, nombre: "Yamaha YZF-R1", cantidad: 0 },
+  { id: 14, precio: 13200, nombre: "Yamaha R6 Race", cantidad: 0},
+  { id: 15, precio: 15500, nombre: "Honda VT 1300 CX FURY", cantidad: 0},
+  { id: 16, precio: 10500, nombre: "Honda CRF450R", cantidad: 0},
+  { id: 17, precio: 4000, nombre: "Kymco Super Dink", cantidad: 0},
+  { id: 18, precio: 4700, nombre: "Primavera 125 Euro 5", cantidad: 0 },
+  { id: 1, precio: 300, nombre: "Baul pequeño", cantidad: 0 },
+  { id: 2, precio: 40, nombre: "Candado duro", cantidad: 0 },
+  { id: 3, precio: 25, nombre: "Lona cubre motos", cantidad: 0},
+  { id: 4, precio: 120, nombre: "Baul grande", cantidad: 0 },
+  { id: 5, precio: 50, nombre: "Candado largo", cantidad: 0 },
+  { id: 6, precio: 150, nombre: "Casco motocross", cantidad: 0 },
+  { id: 7, precio: 330, nombre: "Chupa de cuero", cantidad: 0 },
+  { id: 8, precio: 76, nombre: "Guantes de motos", cantidad: 0 },
+  { id: 9, precio: 420, nombre: "Cascos de moto", cantidad: 0 },
+  { id: 10, precio: 400, nombre: "Pantalon protector de moto", cantidad: 0 }
 ];
 
-let productos = [];
+if(BDDProductos){
+	productos = BDDProductos;
+}
+ 
 
-function aniadirProductoMoto(idMoto, cantidad) {
-	const motos = todasLasMotos.find(m => m.id === idMoto);
-	if (motos) {
-		const siExisteObjeto = productos.find(objeto => objeto.id === idMoto);
-		if (siExisteObjeto) {
-			siExisteObjeto.cantidad += cantidad;
-			console.log("Se ha añadido correctamente");
-			console.log(productos);
-		} else {
-			motos.cantidad = cantidad;
-			productos.push(motos);
-			console.log("Se ha añadido correctamente");
-			console.log(productos);
-		}
-	} else {
-		console.log("No se ha encontrado ninguna moto asi");
-	}
+function aniadirProducto(idProducto, cantidad) {
+  const producto = todosProductos.find(p => p.id === idProducto);
+  if (producto) {
+    const siExisteObjeto = productos.find(objeto => objeto.id === idProducto);
+    if (siExisteObjeto) {
+      siExisteObjeto.cantidad += cantidad;
+    } else {
+      producto.cantidad = cantidad;
+      productos.push(producto);
+    }
+    localStorage.setItem("nuevoProducto", JSON.stringify(productos));
+    console.log("Se ha añadido correctamente");
+    console.log(productos);
+  } else {
+    console.log("No se ha encontrado ningún producto con ese ID");
+  }
 }
 
-//Eliminar producto
-function eliminarProductoMoto(idMoto, cantidad) {
-	const motos = todasLasMotos.find(m => m.id === idMoto);
-	if (motos) {
-		const siExisteObjeto = productos.find(objeto => objeto.id === idMoto);
-		if (siExisteObjeto) {
-			if (siExisteObjeto.cantidad >= 2) {
-				siExisteObjeto.cantidad -= cantidad;
-				console.log("Se ha eliminado correctamente");
-				console.log(productos);
-			} else if(siExisteObjeto.cantidad ===1){
-				motos.cantidad = cantidad;
-				//Aqui tendria que poner la funcion de eliminar el producto
-				console.log("Se ha eliminado correctamente");
-				console.log(productos);
-			}
+//Eliminar producto cantidad
+function eliminarProductoCantidad(idProducto, cantidad) {
+  const producto = todosProductos.find(p => p.id === idProducto);
+  if (producto) {
+    const siExisteObjeto = todosProductos.find(objeto => objeto.id === idProducto);
+    if (siExisteObjeto) {
+      if (siExisteObjeto.cantidad > 1) {
+        siExisteObjeto.cantidad -= cantidad;
+        localStorage.setItem("nuevoProducto", JSON.stringify(todosProductos));
+        console.log("Se ha eliminado correctamente");
+        console.log(todosProductos);
+      } else if (siExisteObjeto.cantidad === 1) {
+        // Eliminar el producto
+        const indice = todosProductos.indexOf(siExisteObjeto);
+        if (indice > -1) {
+          todosProductos.splice(indice, 1);
+          localStorage.setItem("nuevoProducto", JSON.stringify(todosProductos));
+          console.log("Se ha eliminado correctamente");
+          console.log(todosProductos);
+        }
+      }
+    } else {
+      console.log("No se ha encontrado ningún producto con ese ID");
+    }
+  } else {
+    console.log("No se ha encontrado ningún producto con ese ID");
+  }
+}
 
-		} else {
-			console.log("No se ha encontrado ninguna moto asi");
-		}
-	} else {
-		console.log("No se ha encontrado ninguna moto asi");
-	}
+//Eliminar todos los productos
+function eliminarProductoPorId(idProducto) {
+  const indice = productos.findIndex(objeto => objeto.id === idProducto);
+  if (indice !== -1) {
+    productos.splice(indice, 1);
+    localStorage.setItem("nuevoProducto", JSON.stringify(productos));
+    console.log("Se ha eliminado correctamente");
+    console.log(productos);
+  } else {
+    console.log("No se ha encontrado ningún producto con ese ID");
+  }
 }
 
 
-function aniadirProductoComplemento(idProducto, cantidad) {
-	const productosComplementos = todosLosComplementos.find(t => t.id === idProducto);
-	if (productosComplementos) {
-		const siExisteObjeto1 = productos.find(objetoP => objetoP.id === idProducto);
-		if (siExisteObjeto1) {
-			siExisteObjeto1.cantidad += cantidad;
-			console.log("Se ha añadido correctamente");
-			console.log(productos);
-		} else {
-			productosComplementos.cantidad = cantidad;
-			productos.push(productosComplementos);
-			console.log("Se ha añadido correctamente");
-			console.log(productos);
-		}
-	} else {
-		console.log("No se ha encontrado ninguna moto asi");
-	}
-}
+
+
 
