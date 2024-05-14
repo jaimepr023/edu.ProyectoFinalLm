@@ -220,6 +220,15 @@ body {
 }
 
 
+.tabla{
+	border: solid 0.5px white;
+	color: white;
+}
+.columnas{
+	border: solid 0.5px white;
+}
+
+
 
 /*A partir de aqui se trata solo la parte de la tarjeta de credito*/
 .flex__1 {

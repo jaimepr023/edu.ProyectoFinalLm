@@ -22,8 +22,8 @@
 
 <body>
 	<div class="container-fluid d-none d-md-block">
-		<header class="sticky-top">
-			<nav class="navbar bg-body-dark border-bottom border-white  navegador1">
+		<header class="sticky-top ">
+			<nav class="navbar bg-body-dark border-bottom border-white  navegador1 mb-3">
 				<a href="index.html">
 					<div class="col  bg-opacity-25 text-opacity-75 text-center px-2 mx-2 "><img class="icon"
 							src="Imagenes/Logo.png" width="50px" height="40px">
@@ -50,80 +50,102 @@
 			</nav>
 		</header>
 
+
 		<main>
-			<table>
+			<div class="container">
+				<div class="row">
+
+					<button class=" col btn btn-outline-primary my-auto mx-5" onclick="mostrar()">Ver
+						productos</button>
+				</div>
+			</div>
+			<table class="tabla mx-auto my-5">
 				<thead>
 					<tr>
-						<th>Producto</th>
-						<th>Precio</th>
-						<th>Cantidad</th>
+						<th class="columnas">Producto</th>
+						<th class="columnas">Precio</th>
+						<th class="columnas">Cantidad</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><button onclick="eliminarProductoCantidad(idProducto, cantidad)">Quitar 1</button>
-						<button onclick="eliminarProductoPorId(idProducto)">Eliminar producto</button></td>
-					</tr>
+				<tbody id="tbody">
 				</tbody>
 			</table>
-
-
-
-
 		</main>
+	</div>
 
 
 
-		<div class="container-fluid d-md-none">
-			<header class="sticky-top">
-				<nav class="navbar bg-body-dark border-bottom border-white  navegador1 mx-auto">
+	<div class="container-fluid d-md-none">
+		<header class="sticky-top">
+			<nav class="navbar bg-body-dark border-bottom border-white  navegador1 mx-auto mb-3">
 
-					<button class="col  mx-auto btn btn-primary menu" type="button" data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-						<i class="bi bi-list"></i>
-					</button>
-					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-						aria-labelledby="offcanvasExampleLabel">
-						<div class="offcanvas-header">
-							<h5 class="offcanvas-title" id="offcanvasExampleLabel">SHOPBIKER</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-								aria-label="Close"></button>
+				<button class="col  mx-auto btn btn-primary menu" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+					<i class="bi bi-list"></i>
+				</button>
+				<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+					aria-labelledby="offcanvasExampleLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasExampleLabel">SHOPBIKER</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<div>
+							Si le da click al boton podras ver las partes que tiene esta web.
 						</div>
-						<div class="offcanvas-body">
-							<div>
-								Si le da click al boton podras ver las partes que tiene esta web.
-							</div>
-							<div class="dropdown mt-3">
-								<button class="btn btn-secondary dropdown-toggle" type="button"
-									data-bs-toggle="dropdown">
-									Partes de la web
-								</button>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="complementos.html#com_mot2">Complementos moto</a>
-									</li>
-									<li><a class="dropdown-item" href="Categorias.html">Categorias</a></li>
-									<li><a class="dropdown-item" href="complementos.html#com_pro2">Complementos
-											protectores</a></li>
-								</ul>
-							</div>
+						<div class="dropdown mt-3">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+								Partes de la web
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="complementos.html#com_mot2">Complementos moto</a>
+								</li>
+								<li><a class="dropdown-item" href="Categorias.html">Categorias</a></li>
+								<li><a class="dropdown-item" href="complementos.html#com_pro2">Complementos
+										protectores</a></li>
+							</ul>
 						</div>
 					</div>
-					<div class="offset-1"></div>
-					<a href="index.html">
-						<div class="col  bg-opacity-25 text-opacity-75 text-center px-2 mx-auto align-center"><img
-								class="icon" src="Imagenes/Logo.png" width="50px" height="40px">
-							<p class="h1 text-center ">ShopBiker</p>
-						</div>
-					</a>
-					<div class="col bg-opacity-25  text-opacity-75 text-center px-2  mx-auto align-right"><a
-							href="Carrito.html" class=" navbar-brand"><button class="btn btn-outline-danger me-2 "
-								type="button"><i class="bi bi-cart2"></i></button></a></div>
+				</div>
+				<div class="offset-1"></div>
+				<a href="index.html">
+					<div class="col  bg-opacity-25 text-opacity-75 text-center px-2 mx-auto align-center"><img
+							class="icon" src="Imagenes/Logo.png" width="50px" height="40px">
+						<p class="h1 text-center ">ShopBiker</p>
+					</div>
+				</a>
+				<div class="col bg-opacity-25  text-opacity-75 text-center px-2  mx-auto align-right"><a
+						href="Carrito.html" class=" navbar-brand"><button class="btn btn-outline-danger me-2 "
+							type="button"><i class="bi bi-cart2"></i></button></a></div>
 
-				</nav>
-			</header>
+			</nav>
+		</header>
+		<main>
+
+			<div class="container">
+				<div class="row">
+
+					<button class=" col btn btn-outline-primary my-auto mx-5" onclick="mostrar()">Ver
+						productos</button>
+				</div>
+			</div>
+			<table class="tabla mx-auto my-5">
+				<thead>
+					<tr>
+						<th class="columnas">Producto</th>
+						<th class="columnas">Precio</th>
+						<th class="columnas">Cantidad</th>
+					</tr>
+				</thead>
+				<tbody id="tbody1">
+					<button class="btn btn-outline-primary my-auto mx-auto" onclick="mostrar()">Ver
+						productos</button>
+				</tbody>
+			</table>
+		</main>
+	</div>
+
+	<script src="javaScript/Js.js"></script>
 </body>
 
 </html>
