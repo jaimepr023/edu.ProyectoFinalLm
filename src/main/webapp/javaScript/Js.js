@@ -127,6 +127,7 @@ function mostrar() {
 	let resultado = document.getElementById("tbody");
 	let resultado1 = document.getElementById("tbody1");
 	resultado.innerHTML = "";
+	resultado1.innerHTML= "";
 	console.log(productos)
 	for (let i = 0; i < productos.length; i++) {
 		txt = "<tr>";
