@@ -4,6 +4,8 @@
 var BDDProductos = JSON.parse(localStorage.getItem("nuevoProducto"));
 var productos = [{ id: 0, precio: 0, nombre: "Nada", cantidad: 0 }];
 
+
+
 function verificarContrasenia() {
 	let contrasena1 = document.getElementById("exampleInputPassword1").value;
 	let contrasena2 = document.getElementById("exampleInputPassword2").value;
@@ -16,6 +18,8 @@ function verificarContrasenia() {
 	}
 }
 
+
+
 function verificarContrasenia1() {
 	let contrasena3 = document.getElementById("exampleInputPassword3").value;
 	let contrasena4 = document.getElementById("exampleInputPassword4").value;
@@ -27,6 +31,8 @@ function verificarContrasenia1() {
 		return false;
 	}
 }
+
+
 
 const todosProductos = [
 	{ id: 11, precio: 4500, nombre: "KTM Duke 125", cantidad: 0 },
@@ -49,6 +55,8 @@ const todosProductos = [
 	{ id: 10, precio: 400, nombre: "Pantalon protector de moto", cantidad: 0 }
 ];
 
+
+
 if (BDDProductos) {
 	productos = BDDProductos;
 	const indice = productos.findIndex(objeto => objeto.id === 0);
@@ -59,6 +67,8 @@ if (BDDProductos) {
 }
 
 
+
+//Añade un producto a la cesta
 function aniadirProducto(idProducto, cantidad) {
 	const producto = todosProductos.find(p => p.id === idProducto);
 	if (producto) {
@@ -70,12 +80,40 @@ function aniadirProducto(idProducto, cantidad) {
 			productos.push(producto);
 		}
 		localStorage.setItem("nuevoProducto", JSON.stringify(productos));
+		alert("Su producto se ha añadido correctamente");
 		console.log("Se ha añadido correctamente");
 		console.log(productos);
 	} else {
 		console.log("No se ha encontrado ningún producto con ese ID");
 	}
 }
+
+
+
+
+//Añade un producto que ya tenias en la cesta y le aumenta la cantidad
+function aniadirUnProducto(idProducto) {
+	const producto = todosProductos.find(p => p.id === idProducto);
+	if (producto) {
+		const siExisteObjeto = productos.find(objeto => objeto.id === idProducto);
+		if (siExisteObjeto) {
+			if (siExisteObjeto.cantidad >= 1) {
+				siExisteObjeto.cantidad += 1;
+				localStorage.setItem("nuevoProducto", JSON.stringify(productos));
+				console.log("Se ha eliminado correctamente");
+				console.log(productos);
+				mostrar();
+			}
+		} else {
+			console.log("No se ha encontrado ningún producto con ese ID");
+		}
+	} else {
+		console.log("No se ha encontrado ningún producto con ese ID");
+	}
+}
+
+
+
 
 //Eliminar producto cantidad
 function eliminarProductoCantidad(idProducto) {
@@ -90,7 +128,6 @@ function eliminarProductoCantidad(idProducto) {
 				console.log(productos);
 				mostrar();
 			} else if (siExisteObjeto.cantidad === 1) {
-				// Eliminar el producto
 				const indice = productos.indexOf(siExisteObjeto);
 				if (indice > -1) {
 					productos.splice(indice, 1);
@@ -108,6 +145,9 @@ function eliminarProductoCantidad(idProducto) {
 	}
 }
 
+
+
+
 //Eliminar todos los productos
 function eliminarProductoPorId(idProducto) {
 	const indice = productos.findIndex(objeto => objeto.id === idProducto);
@@ -122,19 +162,22 @@ function eliminarProductoPorId(idProducto) {
 	}
 }
 
+
+
+
 function mostrar() {
 	let txt = "";
 	let resultado = document.getElementById("tbody");
 	let resultado1 = document.getElementById("tbody1");
 	resultado.innerHTML = "";
-	resultado1.innerHTML= "";
+	resultado1.innerHTML = "";
 	console.log(productos)
 	for (let i = 0; i < productos.length; i++) {
 		txt = "<tr>";
 		txt += '<td class="columnas" >' + productos[i].nombre + "</td>";
 		txt += '<td class="columnas" >' + productos[i].precio + "</td>";
 		txt += '<td class="columnas">' + productos[i].cantidad + "</td>";
-		txt += '<td class="columnas"><button class="btn btn-outline-primary" onclick="eliminarProductoCantidad(' + productos[i].id + ',' + productos[i].cantidad + ')">Quitar 1</button> <button class="btn btn-outline-primary" onclick="eliminarProductoPorId(' + productos[i].id + ')">Eliminar producto</button></td>'
+		txt += '<td class="columnas"><button class="btn btn-outline-primary" onclick="aniadirUnProducto(' + productos[i].id + ')">Añadir 1</button> <button class="btn btn-outline-primary" onclick="eliminarProductoCantidad(' + productos[i].id + ')">Quitar 1</button> <button class="btn btn-outline-primary" onclick="eliminarProductoPorId(' + productos[i].id + ')">Eliminar producto</button></td>'
 		txt += "</tr>";
 		resultado.innerHTML += txt;
 		resultado1.innerHTML += txt;
@@ -143,6 +186,64 @@ function mostrar() {
 }
 
 
+//Funciones para la tarjeta de credito
+
+function numeroTarjeta() {
+	let resultado = document.getElementById("nT");
+	resultado.innerHTML = "";
+	let resultado1 = document.getElementById("nT1");
+	resultado1.innerHTML = "";
+	let numeroTarjetaPedido;
+	let numerosCaracteresTarjeta = [];
+	do {
+		numeroTarjetaPedido = prompt("Dame el numero de la tarjeta de credito (Escribalo con el formato que aparece en pantalla por favor)", "XXXX XXXX XXXX XXXX");
+		numerosCaracteresTarjeta = numeroTarjetaPedido.split(" ");
+	} while (numerosCaracteresTarjeta.length !== 4);
+
+	resultado.innerHTML = numeroTarjetaPedido;
+	resultado1.innerHTML = numeroTarjetaPedido;
+
+
+}
 
 
 
+function fechaCaducidad() {
+	let resultado = document.getElementById("fC");
+	resultado.innerHTML = "";
+	let resultado1 = document.getElementById("fC1");
+	resultado1.innerHTML = "";
+	let fechaHoy = Date.now();
+	let fechaTarjeta;
+	let mes, anyo;
+	mes = prompt("Dame el mes de la fecha de caducidad de la tarjeta", "XX");
+	anyo = prompt("Dame el año de la fecha de caducidad de la tarjeta", "XXXX");
+	fechaTarjeta = new Date(anyo, (mes - 1), 1);
+	if ((fechaTarjeta.getTime() - fechaHoy) > 0) {
+		resultado.innerHTML = (fechaTarjeta.getMonth() + 1) + "/" + (fechaTarjeta.getFullYear() - 2000);
+		resultado1.innerHTML = (fechaTarjeta.getMonth() + 1) + "/" + (fechaTarjeta.getFullYear() - 2000);
+
+	} else {
+		alert("No has metido unos valores valido vuelve a intentarlo de nuevo");
+		resultado.innerHTML = "XX/XX";
+		resultado1.innerHTML = "XX/XX";
+	}
+
+}
+
+
+function cVVtarjeta() {
+	let resultado = document.getElementById("cVV");
+	resultado.innerHTML = "";
+	let resultado1 = document.getElementById("cVV1");
+	resultado1.innerHTML = "";
+	let cVv;
+	let contarCvv = [];
+	do {
+		cVv = prompt("Dame el digito de 3 numero del CVV", "XXX");
+		contarCvv = cVv.split("");
+	} while (contarCvv.length !== 3);
+	resultado.innerHTML = cVv;
+	resultado1.innerHTML = cVv;
+
+}
