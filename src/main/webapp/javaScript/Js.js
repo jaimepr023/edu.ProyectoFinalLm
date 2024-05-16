@@ -247,3 +247,4 @@ function cVVtarjeta() {
 	resultado1.innerHTML = cVv;
 
 }
+
